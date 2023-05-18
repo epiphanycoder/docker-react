@@ -1,0 +1,13 @@
+FROM node:16-alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
+
+COPY . .
+
+CMD ["npm", "run", "start"]
+
+# sudo docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image id> (with bookmarking volumes)
