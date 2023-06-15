@@ -23,3 +23,5 @@ function App() {
 }
 
 export default App;
+
+// github pages project deploy: https://www.youtube.com/watch?v=GqyC_R3UjjQ
